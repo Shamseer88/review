@@ -1,18 +1,17 @@
 import "./CardList.css";
-import books from "../../src/bookList.js";
 import Card from "./Card";
 
-const CardList = () => {
+const CardList = ({ items }) => {
   return (
     <div className="card-list-container">
-      {books.map((book) => {
+      {items.map((item) => {
         return (
           <Card
-            key={book.id}
-            itemName={book.name}
-            genere={book.genre}
-            image={book.image}
-            author={book.author}
+            key={item.id}
+            itemName={item.name}
+            genere={item.genre}
+            image={item.image}
+            author={item.author}
           />
         );
       })}

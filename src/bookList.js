@@ -28,49 +28,55 @@ const books = [
     name: "The Catcher in the Rye",
     genre: "Classic",
     author: "J.D. Salinger",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 5,
     name: "Pride and Prejudice",
     genre: "Romance",
     author: "Jane Austen",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 6,
     name: "The Hobbit",
     genre: "Fantasy",
     author: "J.R.R. Tolkien",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 7,
     name: "Moby-Dick",
     genre: "Adventure",
     author: "Herman Melville",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://m.media-amazon.com/images/I/71d5wo+-MuL._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 8,
-    name: "War and Peace",
-    genre: "Historical",
-    author: "Leo Tolstoy",
-    image: "https://via.placeholder.com/150",
+    name: "പാത്തുമ്മായുടെ ആട്",
+    genre: "Comic Novel",
+    author: "Vaikom Muhammad Basheer",
+    image:
+      "https://m.media-amazon.com/images/I/61isRprUQ+L._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 9,
-    name: "The Lord of the Rings",
-    genre: "Fantasy",
-    author: "J.R.R. Tolkien",
-    image: "https://via.placeholder.com/150",
+    name: "മയ്യഴിപ്പുഴയുടെ തീരങ്ങളിൽ",
+    genre: "Historical Fiction",
+    author: "M Mukundan",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/1/1c/Mayyazhippuzhayude_Theerangalil%2C_book_by_M._Mukundan.jpg",
   },
   {
     id: 10,
-    name: "Jane Eyre",
-    genre: "Gothic",
-    author: "Charlotte Brontë",
-    image: "https://via.placeholder.com/150",
+    name: "ആടു ജീവിതം",
+    genre: "Survival Novel",
+    author: "Benyamin",
+    image: "https://upload.wikimedia.org/wikipedia/en/b/b5/Adujivitam.jpg",
   },
 ];
 

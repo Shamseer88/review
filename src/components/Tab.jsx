@@ -1,32 +1,20 @@
 import React, { useState } from "react";
 import "./Tab.css";
-import { BiCameraMovie, BiBookOpen } from "react-icons/bi";
+import { BiCameraMovie } from "react-icons/bi";
 import { FiBook } from "react-icons/fi";
 
-const Tab = () => {
-  const [isBooksActive, setIsBooksActive] = useState(true);
-  const [isMoviesActive, setIsMoviesActive] = useState(false);
-
-  const setMoviesButtonActive = () => {
-    setIsMoviesActive(true);
-    setIsBooksActive(false);
-  };
-  const setBooksButtonActive = () => {
-    setIsMoviesActive(false);
-    setIsBooksActive(true);
-  };
-
+const Tab = ({ activeTab, onTabChange }) => {
   return (
     <div className="tab-div">
       <button
-        onClick={setBooksButtonActive}
-        className={isBooksActive && "active-tab-button"}
+        onClick={() => onTabChange("books")}
+        className={activeTab === "books" ? "active-tab-button" : ""}
       >
         <FiBook size={18} /> Books
       </button>
       <button
-        onClick={setMoviesButtonActive}
-        className={isMoviesActive && "active-tab-button"}
+        onClick={() => onTabChange("movies")}
+        className={activeTab === "movies" ? "active-tab-button" : ""}
       >
         <BiCameraMovie size={20} />
         Movies

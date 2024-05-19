@@ -1,12 +1,10 @@
 import "./MainContainer.css";
-import DetailsSidebar from "./DetailsSidebar";
-import ReviewContainer from "./ReviewContainer";
 import CardList from "./CardList";
 
-const MainContainer = () => {
+const MainContainer = ({ items }) => {
   return (
     <div className="main-container">
-      <CardList />
+      <CardList items={items} />
     </div>
   );
 };
