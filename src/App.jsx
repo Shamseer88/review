@@ -7,12 +7,17 @@ import "./App.css";
 
 const App = () => {
   const [showForm, setShowForm] = useState(true);
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <div className={`app-container ${showForm ? "overlay-div" : ""}`}>
-      <TopNav />
+      <TopNav handleClick={toggleForm} />
       <Tab />
       <MainContainer />
-      {showForm && <AddItemForm />}
+      {showForm && <AddItemForm handleClick={toggleForm} />}
     </div>
   );
 };
