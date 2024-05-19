@@ -1,0 +1,26 @@
+.top-nav {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.nav-left:hover {
+  color: var(--orange);
+}
+
+.navbar-btn {
+  padding: 5px 15px;
+  font-size: 13px;
+}
+
+.navbar-btn:hover {
+  background-color: white;
+  color: var(--green);
+}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--light-grey);
+}
+
+:root {
+  --blue: #0057e7;
+  --green: #008744;
+  --red: #d62d20;
+  --orange: #ffa700;
+  --white: #ffffff;
+  --box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
