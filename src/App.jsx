@@ -6,7 +6,7 @@ import AddItemForm from "./components/AddItemForm";
 import "./App.css";
 
 const App = () => {
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
 
   const toggleForm = () => {
     setShowForm(!showForm);
