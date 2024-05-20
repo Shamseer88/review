@@ -1,5 +1,6 @@
 .add-form-container {
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
   box-shadow: var(--box-shadow);
   position: absolute;
   top: 50%;
@@ -75,4 +76,27 @@
 
 .form-submit-btn:hover {
   background-color: var(--orange);
+}
+
+@media (max-width: 1100px) {
+  .add-form-container {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 800px) {
+  .add-form-container {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 580px) {
+  .add-form-container {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
