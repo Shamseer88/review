@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import "./Card.css";
+import { TabContext } from "../context/TabContext";
 
 const Card = ({ itemName, genere, image, author }) => {
+  const { activeTab } = useContext(TabContext);
   return (
     <div className="card">
       <div className="card-image-div">
@@ -17,7 +20,7 @@ const Card = ({ itemName, genere, image, author }) => {
             <p>{genere}</p>
           </div>
           <div>
-            <h5>Author:</h5>
+            <h5>{activeTab === "books" ? "Author" : "Director"}:</h5>
             <p>{author}</p>
           </div>
         </div>

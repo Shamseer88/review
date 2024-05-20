@@ -1,7 +1,10 @@
 import "./CardList.css";
 import Card from "./Card";
+import { useContext } from "react";
+import { TabContext } from "../context/TabContext";
 
 const CardList = ({ items }) => {
+  const { activeTab } = useContext(TabContext);
   return (
     <div className="card-list-container">
       {items.map((item) => {
@@ -11,7 +14,7 @@ const CardList = ({ items }) => {
             itemName={item.name}
             genere={item.genre}
             image={item.image}
-            author={item.author}
+            author={activeTab === "books" ? item.author : item.director}
           />
         );
       })}

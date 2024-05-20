@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./AddItemForm.css";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { TabContext } from "../context/TabContext";
 
 const AddItemForm = ({ handleClick }) => {
+  const { activeTab } = useContext(TabContext);
   return (
     <div className="add-form-container">
       <button className="close-btn" onClick={handleClick}>
@@ -14,7 +16,7 @@ const AddItemForm = ({ handleClick }) => {
           <input type="text" />
         </div>
         <div className="form-element">
-          <label>Author Name:</label>
+          <label>{activeTab === "books" ? "Author" : "Director"} Name:</label>
           <input type="text" />
         </div>
         <div className="form-element">

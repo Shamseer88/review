@@ -9,6 +9,7 @@ import books from "../src/bookList";
 import movies from "../src/MovieList";
 
 import "./App.css";
+import { TabProvider } from "./context/TabContext";
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -17,19 +18,18 @@ const App = () => {
   const toggleForm = () => {
     setShowForm(!showForm);
   };
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
 
   const itemsToDisplay = activeTab === "books" ? books : movies;
 
   return (
-    <div className={`app-container ${showForm ? "overlay-div" : ""}`}>
-      <TopNav handleClick={toggleForm} />
-      <Tab activeTab={activeTab} onTabChange={handleTabChange} />
-      <MainContainer items={itemsToDisplay} />
-      {showForm && <AddItemForm handleClick={toggleForm} />}
-    </div>
+    <TabProvider>
+      <div className={`app-container ${showForm ? "overlay-div" : ""}`}>
+        <TopNav handleClick={toggleForm} />
+        <Tab />
+        <MainContainer books={books} movies={movies} />
+        {showForm && <AddItemForm handleClick={toggleForm} />}
+      </div>
+    </TabProvider>
   );
 };
 
