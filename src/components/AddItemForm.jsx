@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import "./AddItemForm.css";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { TabContext } from "../context/TabContext";
@@ -42,14 +43,17 @@ const AddItemForm = ({ handleClick }) => {
     };
     if (activeTab === "books") {
       addBook(newItem);
+      toast.success("Successfully toasted!");
     } else {
       addMovie(newItem);
+      toast.success("Successfully toasted!");
     }
     handleClick();
   };
 
   return (
     <div className="add-form-container">
+      <Toaster />
       <button className="close-btn" onClick={handleClick}>
         <IoMdCloseCircleOutline size={20} />
       </button>

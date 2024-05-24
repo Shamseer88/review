@@ -7,6 +7,7 @@ import AddItemForm from "./components/AddItemForm";
 
 import "./App.css";
 import { TabProvider } from "./context/TabContext";
+import SingleItemPage from "./pages/SingleItemPage";
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -23,6 +24,7 @@ const App = () => {
         <MainContainer />
         {showForm && <AddItemForm handleClick={toggleForm} />}
       </div>
+      <SingleItemPage />
     </TabProvider>
   );
 };

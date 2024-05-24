@@ -48,6 +48,9 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .card-details-div-btn:hover {
